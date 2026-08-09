@@ -34,6 +34,7 @@ form.addEventListener("submit", async (event) => {
 
         const shortUrl = `${SHORT_URL_BASE}/${data.shortId}`;
 
+<<<<<<< HEAD
         result.innerHTML = `
             <p>Short URL created successfully!</p>
             <p>
@@ -43,6 +44,20 @@ form.addEventListener("submit", async (event) => {
             </p>
         `;
 
+=======
+      const shortUrl =
+    `https://6x8zs1s6m3.execute-api.ap-south-1.amazonaws.com/prod/${data.shortId}`;
+
+result.innerHTML = `
+    <p>Short URL created successfully!</p>
+    <p>
+        Short URL:
+        <a href="${shortUrl}" target="_blank" rel="noopener noreferrer">
+            ${shortUrl}
+        </a>
+    </p>
+`;
+>>>>>>> db7905ff552574cc536d3a0fd676f03cc8f2382d
     } catch (error) {
         result.textContent = "Error: " + error.message;
     }
